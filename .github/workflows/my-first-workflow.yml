@@ -1,0 +1,10 @@
+name: My First Workflow
+on: [push]
+jobs:
+  First-Job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This job was triggered by ${{ github.event_name }}"
+      - run: echo "Branch name ${{ github.ref }}"
+      - run: echo "Repo name ${{ github.repository }}"
+  
